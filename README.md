@@ -1,31 +1,63 @@
-# Milestone-2-Assignment-Principal-Component-Analysis
-# Cancer Dataset PCA Analysis - Anderson Cancer Center
+# Anderson Cancer Center PCA Analysis for Donor Funding
 
-## Donor Funding Model Development Project
+## Project Overview
+This project performs Principal Component Analysis (PCA) on the breast cancer dataset from `sklearn.datasets` to identify essential variables for securing donor funding at the Anderson Cancer Center. The analysis reduces the dataset to 2 principal components, implements logistic regression for prediction (bonus task), and provides insights for donor presentations to address the growing number of referrals.
 
-### 📋 Project Overview
-This project implements Principal Component Analysis (PCA) on the breast cancer dataset from sklearn to identify essential variables for securing donor funding at the Anderson Cancer Center. The analysis reduces dimensionality from 30 features to 2 principal components while maintaining predictive capability through logistic regression.
+## Files Included
+- **Requirements.txt**: Lists dependencies required to run the scripts.
+- **Demo_Quick_Analysis.py**: A lightweight script demonstrating PCA and logistic regression with basic visualizations and insights.
+- **Anderson_Cancer_PCA.py**: A comprehensive script with detailed PCA analysis, visualizations, logistic regression, and insights for donor funding.
+- **quick_pca_results.png**: Output visualization from `Demo_Quick_Analysis.py` (scatter plot and variance bar chart).
+- **pca_analysis_results.png**: Output visualization from `Anderson_Cancer_PCA.py` (scatter plot, variance bar chart, feature loading heatmap, class separation plot).
+- **logistic_regression_results.png**: Output visualization from `Anderson_Cancer_PCA.py` (ROC curve and confusion matrix).
 
-### 🎯 Project Objectives
-1. **PCA Implementation**: Demonstrate essential variable extraction from cancer dataset  
-2. **Dimensionality Reduction**: Reduce dataset to 2 PCA components  
-3. **Bonus Task**: Implement logistic regression for prediction  
-4. **Insights Generation**: Provide actionable insights for donor funding proposals  
+## Setup Instructions
+1. **Prerequisites**:
+   - Python 3.12.3 or compatible version.
+   - A command-line interface or Python IDE (e.g., Jupyter Notebook, VS Code).
+   - Internet access for initial package installation.
 
-### 📊 Dataset Information
-- **Source**: `sklearn.datasets.load_breast_cancer()`
-- **Samples**: 569 cancer cases
-- **Features**: 30 numerical features (mean, standard error, worst values)
-- **Target**: Binary classification (Malignant: 0, Benign: 1)
-- **Feature Categories**:  
-  - Radius, Texture, Perimeter, Area, Smoothness  
-  - Compactness, Concavity, Concave points, Symmetry, Fractal dimension  
+2. **Install Dependencies**:
+   - Create a virtual environment (optional but recommended):
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows: venv\Scripts\activate
+     ```
+   - Install required packages:
+     ```bash
+     pip install -r Requirements.txt
+     ```
 
-### 🛠️ Requirements
+3. **Running the Scripts**:
+   - To run the quick demo:
+     ```bash
+     python Demo_Quick_Analysis.py
+     ```
+     - Outputs: Console report, `quick_pca_results.png`.
+   - To run the comprehensive analysis:
+     ```bash
+     python Anderson_Cancer_PCA.py
+     ```
+     - Outputs: Detailed console report, `pca_analysis_results.png`, `logistic_regression_results.png`.
 
-#### Python Version
-- Python 3.7 or higher
+## Outputs
+- **Console Reports**:
+  - `Demo_Quick_Analysis.py`: Dataset summary, PCA results, logistic regression metrics, and brief insights.
+  - `Anderson_Cancer_PCA.py`: Dataset overview, feature statistics, PCA variance analysis, component loadings, logistic regression metrics, and detailed insights for donor funding.
+- **Visualizations**:
+  - `quick_pca_results.png`: PCA scatter plot and variance bar chart for top 10 components.
+  - `pca_analysis_results.png`: Four-panel visualization (PCA scatter, variance bar chart, feature loading heatmap, class separation).
+  - `logistic_regression_results.png`: ROC curve and confusion matrix for logistic regression.
+- **Insights**: Both scripts provide insights for donor funding, with `Anderson_Cancer_PCA.py` offering a comprehensive report tailored to the growing referral challenge.
 
-#### Required Libraries
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn
+## Notes
+- The scripts use the breast cancer dataset from `sklearn.datasets`, requiring no external data files.
+- Ensure write permissions in the working directory for saving PNG files.
+- For GitHub submission, clone the repository and follow the setup instructions above.
+- To package as a ZIP:
+  ```bash
+  zip -r cancer_pca_analysis.zip Requirements.txt Demo_Quick_Analysis.py Anderson_Cancer_PCA.py
+  ```
+
+## Contact
+For questions or issues, contact the data analyst team at Anderson Cancer Center.
